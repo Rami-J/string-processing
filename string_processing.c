@@ -122,25 +122,24 @@ void scramble_string(char *str)
 
 int main(void)
 {
-
 	char str[100] ="";
 
 	printf("Enter a single word to scramble it: ");
 	scanf("%s", str);
 	//fgets(str, 100, stdin);
-
 	srand(time(NULL));
+	
 	//reverse_string(str);
 	//remove_spaces(str);
 	//printf("%s\n", str);
 	//string_toupper(str);
-//	printf("%s\n", str);
-//	insert_spaces(str);
-//	printf("%s\n", str);
+	//printf("%s\n", str);
+	//insert_spaces(str);
+	//printf("%s\n", str);
 	//randomize_string(str);
-//	printf("%s\n", str);
-//	char ch = 'b';
-//	printf("%d\n", 'b');
+	//printf("%s\n", str);
+	//char ch = 'b';
+	//printf("%d\n", 'b');
 
 	scramble_string(str);
 	printf("%s\n", str);
