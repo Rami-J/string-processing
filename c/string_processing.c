@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <time.h>
 
+// Function that takes a string and removes all spaces within it.
 void remove_spaces(char *str)
 {
 	int i, j;
@@ -21,7 +22,8 @@ void remove_spaces(char *str)
 	}
 }
 
-// Not working at the moment. Fix.
+// <Not working at the moment. Work on changes.>
+// Function that takes a string and inserts a space before each capital letter.
 void insert_spaces(char *str)
 {
 	int i, j, length = strlen(str);
@@ -42,6 +44,7 @@ void insert_spaces(char *str)
 	}
 }
 
+// Function that takes a string and sets all its characters to uppercase.
 void string_toupper(char *str)
 {
 	int i;
@@ -51,6 +54,7 @@ void string_toupper(char *str)
 	}
 }
 
+// Function that takes a string and prints it out in reverse.
 void reverse_string(char *str)
 {
 	int length = strlen(str), i;
@@ -62,6 +66,8 @@ void reverse_string(char *str)
 	printf("\n");
 }
 
+// Function that takes a string as its only parameter and randomizes its alphabetic characters,
+// leaving punctuation alone.
 void randomize_string(char *str)
 {
 	int i;
@@ -70,6 +76,7 @@ void randomize_string(char *str)
 	{
 		if (isalpha(str[i]))
 		{
+			//For each alphabetic character there is a 50/50 chance for it to get uppercased or lowercased.
 			if (rand() % 2)
 			{
 				str[i] = rand() % 26 + 'a';
@@ -98,6 +105,8 @@ int value_is_in_array(int *index_arr, int length, int val)
 	return 0;
 }
 
+// Function takes a string as its only parameter and randomly scrambles the characters
+// within it.
 void scramble_string(char *str)
 {
 	int i, j = 0, length = strlen(str), rand_index, index_exceptions[100];
