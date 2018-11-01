@@ -21,11 +21,13 @@ void remove_spaces(char *str)
 	}
 }
 
+// Not working at the moment. Fix.
 void insert_spaces(char *str)
 {
 	int i, j, length = strlen(str);
 	char temp;
 
+	// make sure not to go out of bounds and segfault
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (isupper(str[i]))
@@ -128,7 +130,7 @@ int main(void)
 	scanf("%s", str);
 	//fgets(str, 100, stdin);
 	srand(time(NULL));
-	
+
 	//reverse_string(str);
 	//remove_spaces(str);
 	//printf("%s\n", str);
